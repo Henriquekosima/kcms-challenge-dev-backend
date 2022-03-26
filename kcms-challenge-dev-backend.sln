@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kcms-challenge-dev-backend", "kcms-challenge-dev-backend.csproj", "{7EE940E8-4312-4C9F-8783-9257AFE0904B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EE940E8-4312-4C9F-8783-9257AFE0904B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE940E8-4312-4C9F-8783-9257AFE0904B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE940E8-4312-4C9F-8783-9257AFE0904B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE940E8-4312-4C9F-8783-9257AFE0904B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58103069-156E-4FA2-8775-CC9329713DF8}
+	EndGlobalSection
+EndGlobal
