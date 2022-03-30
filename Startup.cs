@@ -1,16 +1,12 @@
+using kcms_challenge_dev_backend.Models;
+using kcms_challenge_dev_backend.Repositories;
+using kcms_challenge_dev_backend.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace kcms_challenge_dev_backend
 {
@@ -26,8 +22,10 @@ namespace kcms_challenge_dev_backend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddSingleton<MongoDBConfiguration>();
             services.AddControllers();
+            services.AddRepositoryInfrastructure(Configuration);
+            services.AddServiceInfrastructure(Configuration);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "kcms_challenge_dev_backend", Version = "v1" });
