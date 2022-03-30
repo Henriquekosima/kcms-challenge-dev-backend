@@ -52,7 +52,7 @@ Product - Create
 Product - Update
 ```
 {
-  "name": "string"
+  "categoryID": "string"
 }
 ```
 
