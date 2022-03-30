@@ -103,7 +103,7 @@ namespace kcms_challenge_dev_backend.Controllers
         }
 
         [HttpPut("{ProductID}")]
-        public async Task<IActionResult> Update(string ProductID, string NewCategoryID)
+        public async Task<IActionResult> Update(string ProductID, [FromBody] NewCategoryInputModel NewCategoryInputModel)
         {
             try
             {
@@ -114,7 +114,7 @@ namespace kcms_challenge_dev_backend.Controllers
                     return NotFound();
                 }
 
-                await _productService.UpdateAsync(ProductID, NewCategoryID);
+                await _productService.UpdateAsync(ProductID, NewCategoryInputModel.CategoryID);
 
                 return NoContent();
             }
